@@ -152,14 +152,14 @@ const ImageUploader = () => {
                             <img src={enhancedImage} alt="Enhanced" className="mt-2 w-full h-auto object-contain border border-gray-300 rounded-lg" />
                         </div>
                     )}
-                    {/* {debugInfo && (
+                    {debugInfo && (
                         <div className="mt-4">
                             <h3 className="text-lg font-semibold text-gray-200">Debug Info:</h3>
                             <pre className="mt-2 p-2 bg-gray-600 rounded text-xs text-gray-200 whitespace-pre-wrap overflow-x-auto">
                                 {debugInfo}
                             </pre>
                         </div>
-                    )} */}
+                    )}
                 </div>
             </div>
         </div>
