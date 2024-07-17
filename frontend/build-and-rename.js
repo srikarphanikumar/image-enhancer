@@ -1,14 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process');
 
-// Rename the build directory to dist
-const buildPath = path.join(__dirname, 'build');
-const distPath = path.join(__dirname, 'dist');
+// Run the build command
+execSync('react-scripts build', { stdio: 'inherit' });
 
-if (fs.existsSync(buildPath)) {
-    fs.renameSync(buildPath, distPath);
-    console.log('Build directory renamed to dist');
-} else {
-    console.error('Build directory does not exist');
-    process.exit(1);
-}
+// Run the rename command
+execSync('node rename-build.js', { stdio: 'inherit' });
