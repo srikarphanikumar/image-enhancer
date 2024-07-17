@@ -1,0 +1,13 @@
+{
+    "name": "image-enhancer",
+    "version": "1.0.0",
+    "scripts": {
+        "start:frontend": "npm --prefix frontend start",
+        "start:backend": "npm --prefix backend start",
+        "build:frontend": "npm --prefix frontend run build",
+        "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+    },
+    "dependencies": {
+        "concurrently": "^6.0.0"
+    }
+}
