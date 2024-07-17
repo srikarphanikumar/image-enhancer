@@ -1,10 +1,5 @@
-// frontend/build-and-rename.js
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
-// Run the build command
-execSync('npm run build', { stdio: 'inherit' });
 
 // Rename the build directory to dist
 const buildPath = path.join(__dirname, 'build');
