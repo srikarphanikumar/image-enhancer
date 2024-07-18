@@ -4,8 +4,10 @@
     "scripts": {
         "start:frontend": "npm --prefix frontend start",
         "start:backend": "npm --prefix backend start",
+        "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+        "build": "npm run build:frontend && npm run build:backend",
         "build:frontend": "npm --prefix frontend run build",
-        "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+        "build:backend": "npm --prefix backend run build"
     },
     "dependencies": {
         "concurrently": "^6.0.0"
